@@ -1,1 +1,192 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrall Interactive - Indie Simulation Games</title>
+    <meta name="description" content="Welcome to Thrall Interactive, a small indie studio dedicated to crafting fun and engaging simulation games.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Colors extracted from the pixel art image */
+            --bg-dark: #2d1b2a;
+            --bg-wood: #5e3643;
+            --text-cream: #f4ecd0;
+            --accent-gold: #ffcc00;
+            --accent-orange: #ff6600;
+            --border-color: #1a0f16;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-cream);
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            image-rendering: pixelated;
+        }
+
+        h1, h2, h3, .pixel-button {
+            font-family: 'Press Start 2P', cursive;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header / Hero Section Modified */
+        header {
+            text-align: center;
+            padding: 0; /* Removed padding to let image hit edges */
+            border-bottom: 4px solid var(--border-color);
+            background-color: var(--bg-dark);
+        }
+
+        .main-visual {
+            width: 100%;      /* Full width */
+            height: 500px;    /* Fixed height as requested */
+            object-fit: cover; /* Ensures image fills area without distorting */
+            display: block;
+            border-bottom: 4px solid var(--border-color);
+        }
+
+        .header-content {
+            padding: 3rem 0; /* Spacing for text below the banner image */
+        }
+
+        h1.studio-title {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            text-shadow: 3px 3px 0px var(--accent-orange), 5px 5px 0px var(--border-color);
+            margin-bottom: 1rem;
+        }
+
+        p.tagline {
+            font-size: 1.5rem;
+            color: var(--text-cream);
+        }
+
+        /* Content Sections Style */
+        section {
+            padding: 4rem 0;
+            border-bottom: 4px solid var(--border-color);
+        }
+
+        section:nth-child(even) {
+             background-color: var(--bg-wood);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: 2px 2px 0px var(--border-color);
+        }
+
+        .content-box {
+            background-color: rgba(0,0,0,0.3);
+            border: 4px solid var(--border-color);
+            padding: 2rem;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-visual { height: 300px; } /* Smaller height on mobile */
+            h1.studio-title { font-size: 1.8rem; }
+            p.tagline { font-size: 1.2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="thrall.png" alt="Thrall Interactive Pixel Studio" class="main-visual">
+        
+        <div class="container header-content">
+            <!--
+            <h1 class="studio-title">Thrall Interactive</h1>
+            //-->
+            <p class="tagline">Welcome to our studio.</p>
+            <p style="margin-top: 1rem;">We do our best to create fun simulation games.</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About The Studio</h2>
+            <div class="content-box">
+                <p>
+                    Thrall Interactive is a passionate indie game development studio. We believe big adventures can come from small beginnings.
+                </p>
+                <br>
+                <p>
+                    We are dedicated to crafting deep, engaging, and fun <strong>simulation games</strong> that allow players to build, manage, and explore unique worlds. We pour our hearts into every line of code.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2 class="section-title">Our Philosophy</h2>
+            <div class="grid-2">
+                <div class="content-box">
+                    <h3>Small Team, Big Dreams</h3>
+                    <p>We may be a small squad, but our passion for game development is immense. We value creativity, dedication, and the indie spirit.</p>
+                </div>
+                <div class="content-box">
+                    <h3>Focus on Fun</h3>
+                    <p>Our primary goal is simple: make games that are fun to play. We strive to create memorable experiences for simulation fans worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Upcoming Projects</h2>
+            <div class="content-box" style="text-align: center; padding: 3rem;">
+                <p style="font-size: 1.5rem; color: var(--accent-gold);">[ TOP SECRET SIMULATION ]</p>
+                <p>Our goblins are currently hard at work hammering out the details. Stay tuned for updates!</p>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thrall Interactive. All rights reserved.</p>
+            <p>Indie Spirit</p>
+        </div>
+    </footer>
+
+</body>
+</html>
